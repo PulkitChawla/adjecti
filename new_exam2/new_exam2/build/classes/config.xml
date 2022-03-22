@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE note SYSTEM "config.dtd"> -->
+<actions>
+	<action action-name="index" action-class="com.adj.oexam.Index">
+		<forward key="success" page="index.jsp" />
+		<forward key="failure" page="error.jsp" />
+		<!-- <forward>
+			<status>success</status>
+			<page>index.jsp</page>
+		</forward> -->
+	</action>
+	<action action-name="addExam" action-class="com.adj.oexam.AddExam">
+		<forward key="success" page="addExam.jsp"/>
+		<forward key="failure" page="error.jsp" />
+	</action>
+	<action action-name="addexam" action-class="com.adj.oexam.AddExamServlet">
+		<forward key="success" page="addExam.jsp"/>
+		<forward key="failure" page="error.jsp" />
+	</action>
+	<action action-name="viewExam" action-class="com.adj.oexam.ViewExamServlet">
+		<forward key="success" page="viewExam.jsp"/>
+		<forward key="failure" page="error.jsp" />
+	</action>
+	<action action-name="searchById" action-class="com.adj.oexam.SearchById">
+		<forward key="success" page="searchById.jsp"/>
+		<forward key="failure" page="error.jsp" />
+	</action>
+	<action action-name="search-by-id" action-class="com.adj.oexam.SearchByIdServlet">
+		<forward key="success" page="searchById.jsp"/>
+		<forward key="failure" page="error.jsp" />
+	</action>
+	<action action-name="searchByName" action-class="com.adj.oexam.SearchByName">
+		<forward key="success" page="searchByName.jsp"/>
+		<forward key="failure" page="error.jsp" />
+	</action>
+	<action action-name="search-by-name" action-class="com.adj.oexam.SearchByNameServlet">
+		<forward key="success" page="searchByName.jsp"/>
+		<forward key="failure" page="error.jsp" />
+	</action>
+	<action action-name="delete-by-id" action-class="com.adj.oexam.DeleteExamServlet">
+		<forward key="success" page="viewExam.jsp"/>
+		<forward key="failure" page="error.jsp" />
+	</action>
+	<action action-name="UpdateServlet"
+		action-class="com.adj.oexam.OpenUpdateFormServlet">
+		<forward key="success" page="editExam.jsp" />
+		<forward key="failure" page="error.jsp" />
+	</action>
+	<action action-name="Updateform" action-class="com.adj.oexam.UpdateExamDetailsServlet">
+		<forward key="success" page="viewExam.do"/>
+		<forward key="failure" page="error.jsp" />
+	</action>
+
+</actions>

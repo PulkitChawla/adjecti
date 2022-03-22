@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+	<action actionName="index" actionClass="exam.Index">
+		<forward key="success" page="index.jsp" />
+		<forward key="failure" page="error.jsp" />
+	</action>
+	<action actionName="addExam" actionClass="exam.AddExamRequestHandler">
+		<forward key="success" page="addExam.jsp" />
+		<forward key="failure" page="error.jsp" />
+	</action>
+	<action actionName="viewExam" actionClass="exam.ShowExamRequestHandler">
+		<forward key="success" page="showExam.jsp" />
+		<forward key="failure" page="error.jsp" />
+	</action>
+	 <action actionName="searchById" actionClass="exam.SearchById">
+		<forward key="success" page="SearchExamById.jsp" />
+		<forward key="failure" page="error.jsp" />
+	</action>
+	<action actionName="deleteExam" actionClass="exam.DeleteExamRequestHandler">
+		<forward key="success" page="deleteById.jsp" />
+		<forward key="failure" page="error.jsp" />
+	</action> 
+	<action actionName="editExam" actionClass="exam.EditExamRequestHandler">
+		<forward key="success" page="editExam.jsp" />
+		<forward key="failure" page="error.jsp" />
+	</action> 
+	
+	
+</actions>

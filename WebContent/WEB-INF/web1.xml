@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>Exam</display-name>
+  
+   <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+   <servlet>
+    <servlet-name>AddExamServlet</servlet-name>
+    <servlet-class>exam.servlet.AddExamServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>AddExamServlet</servlet-name>
+    <url-pattern>/addExam</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>DeleteExamServlet</servlet-name>
+    <servlet-class>exam.servlet.DeleteExamServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>DeleteExamServlet</servlet-name>
+    <url-pattern>/deleteExam</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>EditExamServlet</servlet-name>
+    <servlet-class>exam.servlet.EditExamServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>EditExamServlet</servlet-name>
+    <url-pattern>/editExam</url-pattern>
+  </servlet-mapping>
+ 
+ <servlet>
+    <servlet-name>ShowExamServlet</servlet-name>
+    <servlet-class>exam.servlet.ShowExamServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>ShowExamServlet</servlet-name>
+    <url-pattern>/showExam</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>SearchExamServlet</servlet-name>
+    <servlet-class>exam.servlet.SearchExamServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>SearchExamServlet</servlet-name>
+    <url-pattern>/search</url-pattern>
+  </servlet-mapping>
+ 
+</web-app>

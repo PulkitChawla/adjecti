@@ -1,0 +1,14 @@
+use exam;
+create table eadd(eid int,ename varchar(20),edesc varchar(20))
+desc eadd
+select * from eadd
+create table rec(ip varchar(250),time varchar(250),url varchar(250)) 
+desc rec
+select * from rec
+alter table rec modify column time datetime
+drop table rec
+create table user(id int not null auto_increment,userId varchar(30),name varchar(30),pwd varchar(30) ,primary key(id)); 
+desc user
+drop table user
+insert into user values(null,'p@','pulkit','p');
+select * from user

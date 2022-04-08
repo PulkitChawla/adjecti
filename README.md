@@ -1,1 +1,1 @@
-# adjecti
+# welcome to github 

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>OnlineExamFinal</display-name>
+ <welcome-file-list>
+		<welcome-file>login.jsp</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>ActionRequestServlet</servlet-name>
+		<servlet-class>exam.servlet.ActionRequestServlet</servlet-class><!-- ActionRequestServlet -->
+
+		<init-param>
+			<param-name>Config</param-name>
+			<param-value>Config.xml</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ActionRequestServlet</servlet-name>
+		<url-pattern>*.do</url-pattern><!-- original url pattern  *.do -->
+	</servlet-mapping>
+	
+	
+  	
+  	<servlet>
+  		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>exam.user.LoginServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/loginServlet</url-pattern><!-- original url pattern  *.do -->
+	</servlet-mapping>
+	
+	
+	
+  
+  	<filter>  
+		<filter-name>f1</filter-name>  
+		<filter-class>exam.user.UserFilter</filter-class>  
+	</filter>  
+	<filter-mapping>  
+		<filter-name>f1</filter-name>  
+		<url-pattern>*.do</url-pattern>  
+	</filter-mapping> 
+	
+	
+	
+	 
+	
+	 <filter>  
+		<filter-name>AccessFilter</filter-name>  
+		<filter-class>exam.filter.AccessLogFilter</filter-class>  
+	</filter>  
+   
+	<filter-mapping>  
+		<filter-name>AccessFilter</filter-name>  
+		<url-pattern>*.do</url-pattern>  
+	</filter-mapping>   
+	
+	
+	
+	
+	
+	
+	
+	<!-- <servlet>
+  		<servlet-name>s1</servlet-name>
+  		<servlet-class>exam.filter.MyServlet</servlet-class>
+  	</servlet>
+  
+  	<servlet-mapping>
+  		<servlet-name>s1</servlet-name>
+  		<url-pattern>/MyServlet</url-pattern>
+ 	</servlet-mapping> -->
+	<!-- Lines added -->
+	
+	 <!-- <servlet>
+		<servlet-name>ExamController</servlet-name>
+		<servlet-class>exam.annotation.ExamController</servlet-class>
+	</servlet>
+	
+	
+	<servlet-mapping>
+		<servlet-name>ExamRequestController</servlet-name>
+		<url-pattern>/*/*</url-pattern>
+	</servlet-mapping>  -->
+	
+	<!--  till here--> 
+</web-app>
